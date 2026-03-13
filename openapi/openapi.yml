@@ -1,0 +1,112 @@
+openapi: 3.1.0
+info:
+  title: Google AppSheet API
+  description: >-
+    The Google AppSheet API enables programmatic access to AppSheet applications,
+    allowing developers to add, update, delete, and find records in AppSheet
+    tables, as well as invoke predefined AppSheet actions via a REST interface.
+  version: 2.0.0
+  contact:
+    name: Google
+    url: https://support.google.com/appsheet/answer/10105398
+servers:
+  - url: https://api.appsheet.com/api/v2
+paths:
+  /apps/{appId}/tables/{tableName}/Action:
+    post:
+      operationId: invokeAction
+      summary: Invoke Table Action
+      description: >-
+        Performs an action on a table in an AppSheet app. Supports Add, Delete,
+        Edit, Find, and custom Action operations.
+      parameters:
+        - name: appId
+          in: path
+          required: true
+          description: The unique identifier of the AppSheet application.
+          schema:
+            type: string
+        - name: tableName
+          in: path
+          required: true
+          description: The name of the table to perform the action on.
+          schema:
+            type: string
+        - name: applicationAccessKey
+          in: query
+          description: The application access key for authentication.
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ActionRequest'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ActionResponse'
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not found
+components:
+  securitySchemes:
+    ApplicationAccessKey:
+      type: apiKey
+      in: header
+      name: ApplicationAccessKey
+  schemas:
+    ActionRequest:
+      type: object
+      required:
+        - Action
+        - Properties
+      properties:
+        Action:
+          type: string
+          description: >-
+            The action to perform. One of Add, Delete, Edit, Find, or a custom
+            action name.
+          enum:
+            - Add
+            - Delete
+            - Edit
+            - Find
+        Properties:
+          type: object
+          description: Properties for the action including locale and timezone.
+          properties:
+            Locale:
+              type: string
+            Timezone:
+              type: string
+        Rows:
+          type: array
+          description: >-
+            The rows to add, edit, delete, or the filter criteria for Find
+            operations.
+          items:
+            type: object
+            additionalProperties: true
+    ActionResponse:
+      type: object
+      properties:
+        Rows:
+          type: array
+          description: The rows returned from the action.
+          items:
+            type: object
+            additionalProperties: true
+    Row:
+      type: object
+      description: A row of data from an AppSheet table.
+      additionalProperties: true
+security:
+  - ApplicationAccessKey: []

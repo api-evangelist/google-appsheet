@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ActionRequest.json",
+  "title": "Google AppSheet Action Request",
+  "description": "A request to perform an action on an AppSheet table.",
+  "type": "object",
+  "required": ["Action", "Properties"],
+  "properties": {
+    "Action": {
+      "type": "string",
+      "description": "The action to perform on the table.",
+      "enum": ["Add", "Delete", "Edit", "Find"]
+    },
+    "Properties": {
+      "type": "object",
+      "description": "Properties for the action.",
+      "properties": {
+        "Locale": {
+          "type": "string",
+          "description": "The locale for the request."
+        },
+        "Timezone": {
+          "type": "string",
+          "description": "The timezone for the request."
+        }
+      }
+    },
+    "Rows": {
+      "type": "array",
+      "description": "The rows to operate on or filter criteria.",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    }
+  }
+}

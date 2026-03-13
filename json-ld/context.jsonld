@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "appsheet": "https://api.appsheet.com/api/v2/",
+    "SoftwareApplication": "schema:SoftwareApplication",
+    "name": "schema:name",
+    "description": "schema:description",
+    "Action": "schema:Action",
+    "actionStatus": "schema:actionStatus",
+    "target": "schema:target",
+    "result": "schema:result",
+    "object": "schema:object",
+    "DataFeed": "schema:DataFeed",
+    "dataFeedElement": "schema:dataFeedElement",
+    "Dataset": "schema:Dataset"
+  }
+}
