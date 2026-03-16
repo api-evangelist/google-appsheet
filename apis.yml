@@ -1,5 +1,5 @@
 aid: google-appsheet
-name: Google AppSheet API
+name: Google AppSheet
 description: >-
   The Google AppSheet API enables programmatic access to AppSheet applications,
   allowing developers to add, update, delete, and find records in AppSheet
