@@ -15,7 +15,7 @@ paths:
   /apps/{appId}/tables/{tableName}/Action:
     post:
       operationId: invokeAction
-      summary: Invoke Table Action
+      summary: Google AppSheet Invoke Table Action
       description: >-
         Performs an action on a table in an AppSheet app. Supports Add, Delete,
         Edit, Find, and custom Action operations.
