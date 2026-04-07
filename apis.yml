@@ -11,12 +11,12 @@ created: '2026-03-13'
 modified: '2026-03-16'
 specificationVersion: '0.19'
 tags:
-  - No-Code
-  - Low-Code
   - Applications
-  - Tables
   - Data
   - Google
+  - Low-Code
+  - No-Code
+  - Tables
 apis:
   - aid: google-appsheet:google-appsheet
     name: Google AppSheet API
@@ -31,10 +31,10 @@ apis:
       - type: JSONSchema
         url: json-schema/ActionRequest.json
     tags:
+      - Actions
       - AppSheet
       - No-Code
       - Tables
-      - Actions
 common:
   - type: Getting Started
     url: https://support.google.com/appsheet/answer/10105398
