@@ -36,11 +36,11 @@ apis:
       - No-Code
       - Tables
 common:
-  - type: Getting Started
+  - type: GettingStarted
     url: https://support.google.com/appsheet/answer/10105398
   - type: Pricing
     url: https://workspace.google.com/products/appsheet/pricing/
-  - type: JSON-LD
+  - type: JSONLD
     url: json-ld/context.jsonld
 maintainers:
   - FN: Kin Lane
