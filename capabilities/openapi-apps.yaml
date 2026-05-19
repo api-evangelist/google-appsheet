@@ -1,0 +1,102 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google AppSheet API — Apps
+  description: 'Google AppSheet API — Apps. 1 operations. Lead operation: Google AppSheet Invoke Table Action. Self-contained
+    Naftiko capability covering one Google Appsheet business surface.'
+  tags:
+  - Google Appsheet
+  - Apps
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    GOOGLE_APPSHEET_API_KEY: GOOGLE_APPSHEET_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: openapi-apps
+    baseUri: https://api.appsheet.com/api/v2
+    description: Google AppSheet API — Apps business capability. Self-contained, no shared references.
+    resources:
+    - name: apps-appId-tables-tableName-Action
+      path: /apps/{appId}/tables/{tableName}/Action
+      operations:
+      - name: invokeaction
+        method: POST
+        description: Google AppSheet Invoke Table Action
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: appId
+          in: path
+          type: string
+          description: The unique identifier of the AppSheet application.
+          required: true
+        - name: tableName
+          in: path
+          type: string
+          description: The name of the table to perform the action on.
+          required: true
+        - name: applicationAccessKey
+          in: query
+          type: string
+          description: The application access key for authentication.
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: apikey
+      key: ApplicationAccessKey
+      value: '{{env.GOOGLE_APPSHEET_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: openapi-apps-rest
+    port: 8080
+    description: REST adapter for Google AppSheet API — Apps. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/apps/{appid}/tables/{tablename}/action
+      name: apps-appid-tables-tablename-action
+      description: REST surface for apps-appId-tables-tableName-Action.
+      operations:
+      - method: POST
+        name: invokeaction
+        description: Google AppSheet Invoke Table Action
+        call: openapi-apps.invokeaction
+        with:
+          appId: rest.appId
+          tableName: rest.tableName
+          applicationAccessKey: rest.applicationAccessKey
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: openapi-apps-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Google AppSheet API — Apps. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: google-appsheet-invoke-table-action
+      description: Google AppSheet Invoke Table Action
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: openapi-apps.invokeaction
+      with:
+        appId: tools.appId
+        tableName: tools.tableName
+        applicationAccessKey: tools.applicationAccessKey
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
