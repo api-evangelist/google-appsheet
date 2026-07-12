@@ -1,0 +1,15 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: ApplicationAccessKey
+  type: apiKey
+  in: header
+  parameter: ApplicationAccessKey
+  sources:
+  - openapi/openapi.yml

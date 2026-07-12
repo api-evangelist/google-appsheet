@@ -35,6 +35,12 @@ apis:
       - No-Code
       - Tables
 common:
+  - type: VulnerabilityDisclosure
+    url: security/google-appsheet-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/google-appsheet-domain-security.yml
+  - type: Authentication
+    url: authentication/google-appsheet-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/appsheet
   - type: GettingStarted
