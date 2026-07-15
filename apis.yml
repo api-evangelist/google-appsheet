@@ -35,6 +35,8 @@ apis:
       - No-Code
       - Tables
 common:
+  - type: AgenticAccess
+    url: agentic-access/google-appsheet-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/google-appsheet-vulnerability-disclosure.yml
   - type: DomainSecurity
