@@ -4,7 +4,20 @@ description: >-
   The Google AppSheet API enables programmatic access to AppSheet applications, allowing developers to add, update,
   delete, and find records in AppSheet tables, as well as invoke predefined AppSheet actions via a REST interface.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-appsheet.png
 url: https://raw.githubusercontent.com/api-evangelist/google-appsheet/refs/heads/main/apis.yml
 created: '2026-03-13'
 modified: '2026-05-19'
@@ -17,23 +30,18 @@ tags:
   - No-Code
   - Tables
 apis:
-  - aid: google-appsheet:google-appsheet
-    name: Google AppSheet API
-    description: >-
-      Provides REST API access to AppSheet applications for performing CRUD operations on table data and invoking custom
-      actions programmatically.
-    humanURL: https://support.google.com/appsheet/answer/10105398
-    baseURL: https://api.appsheet.com/api/v2
-    properties:
-      - type: OpenAPI
-        url: openapi/openapi.yml
-      - type: JSONSchema
-        url: json-schema/ActionRequest.json
-    tags:
-      - Actions
-      - AppSheet
-      - No-Code
-      - Tables
+- aid: google-appsheet:google-appsheet-apps-api
+  name: Google AppSheet Apps API
+  description: The Apps API from Google AppSheet — 1 operation(s) for apps.
+  humanURL: https://support.google.com/appsheet/answer/10105398
+  baseURL: https://api.appsheet.com/api/v2
+  tags:
+  - Apps
+  properties:
+  - type: OpenAPI
+    url: openapi/google-appsheet-apps-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/ActionRequest.json
 common:
   - type: AgenticAccess
     url: agentic-access/google-appsheet-agentic-access.yml
