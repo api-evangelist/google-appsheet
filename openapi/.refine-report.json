@@ -1,0 +1,14 @@
+{
+  "provider": "google-appsheet",
+  "sources": [
+    "google-appsheet-apps-api-openapi.yml"
+  ],
+  "outputs": [
+    "google-appsheet-apps-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
