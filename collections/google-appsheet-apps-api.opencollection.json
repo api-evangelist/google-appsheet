@@ -1,0 +1,61 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google AppSheet Apps API",
+    "version": "2.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "ApplicationAccessKey",
+      "value": "{{ApplicationAccessKey}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Apps",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google AppSheet Invoke Table Action",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.appsheet.com/api/v2/apps/:appId/tables/:tableName/Action",
+            "params": [
+              {
+                "name": "appId",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the AppSheet application."
+              },
+              {
+                "name": "tableName",
+                "value": "",
+                "type": "path",
+                "description": "The name of the table to perform the action on."
+              },
+              {
+                "name": "applicationAccessKey",
+                "value": "",
+                "type": "query",
+                "description": "The application access key for authentication."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Performs an action on a table in an AppSheet app. Supports Add, Delete, Edit, Find, and custom Action operations."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
