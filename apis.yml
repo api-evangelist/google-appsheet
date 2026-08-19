@@ -21,7 +21,7 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-app
 url: https://raw.githubusercontent.com/api-evangelist/google-appsheet/refs/heads/main/apis.yml
 created: '2026-03-13'
 modified: '2026-05-19'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 tags:
   - Applications
   - Data
