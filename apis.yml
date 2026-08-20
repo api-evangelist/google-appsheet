@@ -23,6 +23,13 @@ created: '2026-03-13'
 modified: '2026-05-19'
 specificationVersion: '0.23'
 tags:
+  - Application
+  - Data
+  - Google
+  - Low-Code
+  - No-Code
+  - Tables
+tags_raw:
   - Applications
   - Data
   - Google
@@ -36,6 +43,8 @@ apis:
   humanURL: https://support.google.com/appsheet/answer/10105398
   baseURL: https://api.appsheet.com/api/v2
   tags:
+  - Application
+  tags_raw:
   - Apps
   properties:
   - type: OpenAPI
