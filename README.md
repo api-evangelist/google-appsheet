@@ -1,4 +1,4 @@
-# Google AppSheet (google-appsheet)
+# Google AppSheet
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,57 +66,134 @@
 
 The Google AppSheet API enables programmatic access to AppSheet applications, allowing developers to add, update, delete, and find records in AppSheet tables, as well as invoke predefined AppSheet actions via a REST interface.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/google-appsheet/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/google-appsheet/refs/heads/main/apis.yml)
+**Areas:** Application · Data · Google · Low-Code · No-Code · Tables
 
-## Scope
+## Google AppSheet on APIs.io
 
-- **Type:** Index
+Everything profiled for Google AppSheet is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/google-appsheet/](https://apis.io/providers/google-appsheet/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (1)
 
-- Applications
-- Data
-- Google
-- Low-Code
-- No-Code
-- Tables
+- [Google AppSheet Apps API](https://apis.io/apis/google-appsheet/google-appsheet-apps-api/) — The Apps API from Google AppSheet — 1 operation(s) for apps.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-13
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Google AppSheet API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Provides REST API access to AppSheet applications for performing CRUD operations on table data and invoking custom actions programmatically.
+- [Google Appsheet Agentic Access](https://apis.io/agentic-access/google-appsheet/google-appsheet-agentic-access/)
 
-- **Human URL:** [https://support.google.com/appsheet/answer/10105398](https://support.google.com/appsheet/answer/10105398)
-- **Base URL:** `https://api.appsheet.com/api/v2`
+#### JSON Schema (1)
 
-#### Tags
+The data models the API reads and writes.
 
-- Actions
-- AppSheet
-- No-Code
-- Tables
+- [Google AppSheet Action Request](https://apis.io/schemas/google-appsheet/ActionRequest/)
 
-#### Properties
+#### JSON-LD (1)
 
-- [OpenAPI](openapi/openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/openapi.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/openapi.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/ActionRequest.json) — [JSON Schema](https://json-schema.org/specification)
+Linked-data contexts for the provider's vocabulary.
 
-## Common Properties
+- [context Context](https://apis.io/jsonld/google-appsheet/context/)
 
-- [LinkedIn](https://www.linkedin.com/company/appsheet)
-- [Getting Started](https://support.google.com/appsheet/answer/10105398)
+#### Collections (2)
+
+Postman and Open Collection request collections.
+
+- [Google AppSheet Apps API](https://apis.io/collections/google-appsheet/open-google-appsheet-apps-api/)
+- [Google AppSheet API](https://apis.io/collections/google-appsheet/open-openapi/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Google AppSheet — jsonschema rules](https://apis.io/rules/google-appsheet/google-appsheet-jsonschema-spectral-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Google Appsheet Authentication](https://apis.io/security/google-appsheet/google-appsheet-authentication/)
+- [Google Appsheet Domain Security](https://apis.io/security/google-appsheet/google-appsheet-domain-security/)
+- [Google Appsheet Vulnerability Disclosure](https://apis.io/security/google-appsheet/google-appsheet-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Google Appsheet Plans Pricing](https://apis.io/plans/google-appsheet/google-appsheet-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Google Appsheet Rate Limits](https://apis.io/rate-limits/google-appsheet/google-appsheet-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Google Appsheet Finops](https://apis.io/finops/google-appsheet/google-appsheet-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.google.com/)
+- [Getting started](https://support.google.com/appsheet/answer/10105398)
 - [Pricing](https://workspace.google.com/products/appsheet/pricing/)
-- [JSON-LD](json-ld/context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 28.3** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 60.5 |
+| Contract governance | 9.8 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 7.9 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 22.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/google-appsheet/](https://apis.io/providers/google-appsheet/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Google AppSheet: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/google-appsheet/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
